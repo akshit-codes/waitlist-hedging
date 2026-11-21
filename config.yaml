@@ -1,0 +1,38 @@
+# Default market: three AC 3-tier coaches on one route on the same day, under
+# the rules in force in late 2026. Money is in rupees, time in hours. Sources
+# for the policy numbers are in the report.
+
+trains:
+  - {name: afternoon, departs: 15, capacity: 72, fare: 800}
+  - {name: evening,   departs: 19, capacity: 72, fare: 800}
+  - {name: night,     departs: 23, capacity: 72, fare: 800}
+
+policy:
+  waitlist_cap: 0.60        # waitlist slots as a fraction of capacity (omega); 60% for AC classes
+  release_refund: 0         # paid for releasing a redundant waitlisted ticket (beta)
+  chart_hours: 10           # first chart is prepared this long before departure (tau_c)
+
+charges:
+  waitlist_cancel: 60       # clerkage, also deducted when the chart cancels the ticket (c_W)
+  confirmed_flat: 180       # confirmed ticket cancelled more than 72 h ahead (AC 3-tier)
+  confirmed_72h: 0.25       # share of fare, 72 h to 24 h ahead
+  confirmed_24h: 0.50       # share of fare, 24 h to 8 h ahead
+  no_refund_hours: 8        # nothing back for a confirmed ticket cancelled later than this
+
+market:
+  advance_days: 30          # bookings open this many days before the travel day
+  last_booking_hours: 12    # nobody books later than this before the first departure
+  quota_berths: 3           # held back per train and given to the waitlist at charting
+  resale_prob: 0.3          # chance a berth vacated after the chart is sold again (psi)
+  empty_berth_cost: 500     # social cost of a berth that departs empty (kappa)
+
+travellers:
+  count: 330
+  plan_change_prob: 0.12    # eta
+  hassle: 40                # cost of going online to cancel a ticket (epsilon)
+  outside_option: 400       # value of the bus, a flight, or staying home (o)
+  value_noise: 150          # s.d. of individual values around the type's values
+  types:
+    - {name: night-only, share: 0.35, values: [1400, 1700, 2600]}
+    - {name: flexible,   share: 0.40, values: [1900, 2000, 2100]}
+    - {name: early,      share: 0.25, values: [2300, 1900, 1500]}

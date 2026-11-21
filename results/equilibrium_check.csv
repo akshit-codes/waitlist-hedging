@@ -1,0 +1,6 @@
+run,hedgers,welfare,welfare_ci,night-only hedging,flexible hedging,early hedging,night-only regret (Rs.),flexible regret (Rs.),early regret (Rs.)
+start: even mix,0.233,505345.3667,475.2332,0.9991,0.4061,0.0035,0.0469,0.9146,0.0628
+start: nobody hedges,0.2386,505278.7386,480.8883,0.9957,0.4675,0.0087,0.1777,1.2632,0.0933
+start: all hedge late,0.234,505302.7917,476.0767,1.0,0.4113,0.013,0.0471,0.8302,0.2161
+deviating group 3%,0.2346,505328.2589,475.5623,0.9991,0.4234,0.0035,0.0548,2.6516,0.0602
+one traveller deviates,0.2362,504964.0065,483.78,0.9991,0.4407,0.0035,0.33,2.7575,0.0416

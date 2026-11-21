@@ -1,0 +1,9 @@
+rule,chances it is given,mean abs. error (Rs.),same decision
+Eq. 2 (hedge),flat 25%,29.2616,10 of 15
+Eq. 2 (hedge),per train,31.5153,10 of 15
+Eq. 2 (hedge),per train and position,42.8303,10 of 15
+Eq. 2 (hedge),joint chances,40.8293,10 of 15
+Eq. 3 (release),flat 25%,59.7391,14 of 15
+Eq. 3 (release),per train,60.287,14 of 15
+Eq. 3 (release),per train and position,76.0495,14 of 15
+Eq. 3 (release),joint chances,76.0495,14 of 15
